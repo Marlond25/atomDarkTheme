@@ -1,0 +1,65 @@
+/*
+ * Marlon Ryzen's - Dark theme for Atom
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+/*
+ * Examples
+ * (To see them, uncomment and save)
+ */
+
+// style the background color of the tree view
+.tree-view {
+  // background-color: whitesmoke;
+  background-color: black;
+}
+
+// Tabs
+// -------------------
+
+// Displays selectable tabs above the editor.
+// Overrides: atom/tabs
+
+.tab-bar {
+  color: white;
+  background-color: black;
+  .tab {
+    color: white;
+    background-color: black !important;
+    &.active {
+      color: white;
+      background-color: black;
+    }
+  }
+}
+
+// style the background and foreground colors on the atom-text-editor-element itself
+atom-text-editor {
+  // color: white;
+  // background-color: hsl(180, 24%, 12%);
+  background-color: black;
+}
+
+// style UI elements inside atom-text-editor
+atom-text-editor .cursor {
+  // border-color: red;
+}
+
+atom-text-editor[mini] {
+  background-color: black;
+
+  &.is-focused {
+    background-color: black;
+  }
+
+  .placeholder-text {
+    color: @text-color-subtle;
+  }
+  .selection .region {
+    background-color: black;
+  }
+}
